@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+  .foo-before {
+    background-color: white;
+    color: black;
+  }
+  .foo-after {
+    background-color: black;
+    color: white;
+  }
+  </style>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>
+  $(function() {
+    $('#foo').click(function() {
+      $(this).toggleClass('foo-before foo-after');
+    });
+  });
+  </script>
+</head>
+<body>
+<div id="foo" class="foo-before">Click me.</div>
+</body>
+</html>

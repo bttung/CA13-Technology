@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+  section {
+    height: 160px;
+  }
+  
+  section div {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    padding: 5px;
+    font-seize: 25pt;
+    background-color: green;
+    color: white;
+  }
+  </style>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>
+  $(function() {
+    $('#show').click(function() {
+      $('#target_show_hide').show('slow');
+    });
+    
+    $('#hide').click(function() {
+      $('#target_show_hide').hide(1000, 'swing');
+    });
+    
+    $('#slideUp').click(function() {
+      $('#target_slideUp_slideDown').slideUp(1000);
+    });
+    
+    $('#slideDown').click(function() {
+      $('#target_slideUp_slideDown').slideDown(1000);
+    });
+    
+    $('#fadeIn').click(function() {
+      $('#target_fadeIn_fadeOut').fadeIn(1000);
+    });
+    
+    $('#fadeOut').click(function() {
+      $('#target_fadeIn_fadeOut').fadeOut(1000);
+    });
+    
+    $('#animation').click(function() {
+      $('#target_animation').animate({ borderRadius: '+=80px'}, 'slow', 'linear', function() {
+        $(this).text('circle').css('textAlign', 'center');
+      });
+    });
+    
+    $('#clear').click(function() {
+      $('#target_animation').css({
+        borderRadius: 0,
+        textAlign: 'left'
+      }).text('rectangle');
+    });
+  });
+  </script>
+</head>
+<body>
+  <section>
+    <input type="button" value="show()" id="show" />
+    <input type="button" value="hide()" id="hide" />
+    <div id="target_show_hide">show hide</div>
+  </section>
+  
+  <section>
+    <input type="button" value="slideUp()" id="slideUp" />
+    <input type="button" value="slideDown()" id="slideDown" />
+    <div id="target_slideUp_slideDown">slideUp slideDown</div>
+  </section>
+  
+  <section>
+    <input type="button" value="fadeIn()" id="fadeIn" />
+    <input type="button" value="fadeOut()" id="fadeOut" />
+    <div id="target_fadeIn_fadeOut">fadeIn fadeOut</div>
+  </section>
+  
+  <section>
+    <input type="button" value="animation()" id="animation" />
+    <input type="button" value="clear" id="clear" />
+    <div id="target_animation">rectangle</div>
+  </section>
+</body>
+</html>

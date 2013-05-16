@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>テスト</title>
+<meta charset="utf8">
+<script>
+function init() {
+	var foo = document.getElementById('foo');
+	alert(foo.getElementById);
+	alert(foo.getElementsByTagName);
+	var fooSpans = foo.getElementsByTagName('span');
+	alert(fooSpans.length);
+	var allSpans = document.getElementsByTagName('span');
+	alert(allSpans.length);
+}
+</script>
+</head>
+<body onload="init()">
+<p id ='foo'>
+	<span>a</span>
+	<span>b</span>
+	<span>c</span>
+</p>
+<p id='bar'>
+	<span>x</span>	
+</p>
+</body>
+</html>

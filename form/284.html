@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>イベントハンドラ</title>
+  	<style>
+  	#foo {
+  		background-color: white;
+  		color:black;
+  	}
+  	</style>
+  </head>
+  <body>
+    <div id="foo" class="foo-before">This is foo. Click me.</div>
+    <div id="bar" class="foo-before">This is bar.</div>
+    <script>
+      var foo = document.getElementById('foo');
+      foo.onclick = function toggleStyle() {
+        var style = this.style;
+       
+        if (!style.cssFloat) {
+          style.cssFloat = 'left';
+          style.backgroundColor = 'black';
+          style.color = 'white';
+        } else {
+          style.cssFloat = '';
+          style.backgroundColor = 'white';
+          style.color = 'black';
+        }
+      };
+    </script>
+  </body>
+</html>

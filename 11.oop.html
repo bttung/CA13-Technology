@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>オブジェクト指向プログラミング</title>
+</head>
+<body>
+
+<script>
+
+/*************
+ * Userクラス
+ *************/
+// Userクラスの定義
+function User(name) {
+  this.name = name;
+}
+
+// クラスメソッドの定義
+User.tasu = function(x, y) {
+  return x + y;
+}
+
+// インスタンスメソッドの定義
+User.prototype.speak = function() {
+  document.write('こんにちは' + this.name + 'です。<br />');
+}
+
+// クラスメソッド呼び出し
+document.write(User.tasu(3, 5) + '<br />');
+
+// インスタンスを作ってメソッド呼び出し
+var u = new User('松本');
+u.speak();
+
+
+/**************
+ * User2クラス
+ **************/
+// User2クラスの定義
+function User2(name, age) {
+  this.name = name;
+  this.age = age;
+}
+
+// Userクラスを継承する
+User2.prototype = new User();
+
+// User2クラスに talk メソッドを追加
+User2.prototype.talk = function() {
+  document.write('今' + this.age + '歳です。<br />');
+}s
+
+// インスタンスを作ってそれぞれのメソッド呼び出し
+var u2 = new User2('齊藤', 20);
+u2.speak();
+u2.talk();
+
+
+/**************
+ * User3クラス
+ **************/
+// User3クラスの定義
+function User3(name, age) {
+  this.name = name;
+  this.age = age;
+}
+// Userクラスを継承する
+User3.prototype = new User();
+
+// speakメソッドをオーバーライドする
+User3.prototype.speak = function() {
+  document.write(this.name + 'です。' + this.age + '歳です。<br />');
+}
+
+// インスタンスを作ってメソッド呼び出し
+var u3 = new User3('清水', 19);
+u3.speak();
+
+</script>
+
+</body>
+</html>

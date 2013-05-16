@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>配列</title>
+</head>
+<body>
+
+<script>
+
+// パターン1
+// var arr = new Array(); // var arr = []; // こう書いても同じ
+// arr[0] = 'a';
+// arr[1] = 'b';
+// arr[2] = 'c';
+
+
+
+// パターン2
+//var arr = new Array(3); // var arr = [3]; // これは別物
+// arr[0] = 'a';
+// arr[1] = 'b';
+// arr[2] = 'c';
+
+
+
+// パターン3
+// var arr = new Array('a', 'b', 'c');
+
+
+//パターン4
+var arr = ['a', 'b', 'c'];
+
+
+document.write('<p>for<br />');
+for (var i = 0; i < arr.length; i++) {
+  document.write(arr[i] + '<br />');
+}
+document.write('</p>');
+
+
+document.write('<p>forEach<br />');
+arr.forEach(function(n) {
+  document.write(n + '<br />');
+});
+document.write('</p>');
+
+</script>
+
+</body>
+</html>

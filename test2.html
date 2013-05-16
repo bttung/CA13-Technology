@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>テスト</title>
+<meta charset="utf8">
+
+</head>
+<body>
+<a id="foo" href="http://example.com" >example.com</a>
+</body>
+<script>
+function stop(event) {
+	alert('Stop paage transfer');
+	return false;
+}
+// function init() {
+	var btn = document.getElementById('foo');
+	btn.onclick = stop;
+//}
+
+</script>
+</html>

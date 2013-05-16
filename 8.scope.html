@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>変数のスコープ</title>
+</head>
+<body>
+
+<script>
+
+var x = 10;
+var y = 20;
+
+document.write('before x: ' + x + '<br />');
+document.write('before y: ' + y + '<br />');
+
+function test() {
+  var x = 100;
+  y = 200;
+}
+
+test();
+
+document.write('after x: ' + x + '<br />');
+document.write('after y: ' + y + '<br />');
+
+</script>
+
+</body>
+</html>

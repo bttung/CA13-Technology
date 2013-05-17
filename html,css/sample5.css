@@ -1,0 +1,29 @@
+body {
+  width: 100%;
+}
+
+#header{
+  background: green;
+}
+
+#main{
+  width: 100%;
+}
+
+#sidemenu{
+  width: 30%;
+  float: left;
+  background: blue;
+}
+
+#contents{
+  width: 70%;
+  float: left;
+  background: red;
+}
+
+#footer{
+  width: 100%;
+  clea: both;
+  background: green;
+}

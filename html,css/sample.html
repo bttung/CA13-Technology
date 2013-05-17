@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>サンプル</title>
+</head>
+<body onload="load();">
+<canvas id="sample" style="border: 1px solid;" width="300" height="300"></canvas>
+<script language="javascript" type="text/javascript">
+function load(){
+	var canvas = document.getElementById("sample")
+	var context = canvas.getContext("2d");
+	context.strokeRect(50, 15, 200, 200);
+	context.fillRect(40, 50, 100, 100);
+	context.clearRect(70, 60, 50, 50);
+}
+</script>
+</body>
+</html>

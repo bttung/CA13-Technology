@@ -1,0 +1,22 @@
+	 h1{
+	 	background: red;
+	 }
+	 
+	 h2 {
+	  color: #F90;
+	 }
+	 
+	 p {
+	   margin: 1%;
+	   padding: 1%;
+	 }
+	 
+	 div {
+	   font-size: 20px;
+	   margin: 1%;
+	   padding: 2%;
+	   line-height: 120%;
+	   border-style: double;
+	   border-color: #F33;
+	   background-color: #FCC;
+	   }

@@ -1,0 +1,35 @@
+div p {
+  font-size: 50px;
+}
+
+.foo p {
+  color: red;
+}
+
+#main .bar p {
+ font-weight: bold;
+}
+
+p.foo {
+  color: red;
+}
+
+
+
+
+p#main.bar {
+  font-weight: bold;
+}
+
+p #main .bar {
+  font-weight: bold;
+}
+
+p .foo, div.bar {
+  font-weight: bold;
+}
+
+p.foo.bar {
+ font-weight: bold;
+}
+

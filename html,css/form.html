@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Formのサンプル</title>
+</head>
+<body>
+  <h1>Form</h1>
+  <form action="" method="get">
+    <p>必須項目：<input name="text" type="text" placeholder="Input greeting" required="required" pattern="^[a-z].*$" /></p>
+    <p>日時(標準)：<input name="datetime" type="datetime" /></p>
+    <p>日時(ローカル)：<input name="datetime-local" type="datetime-local" /></p>
+    <p>日付：<input name="date" type="date" /></p>
+    <p>月：<input name="month" type="month" /></p>
+    <p>週：<input name="week" type="week" /></p>
+    <p>時間：<input name="week" type="time" /></p>
+    <p>数値：<input name="number" type="number" /></p>
+    <p>範囲：<input name="range" type="range" /></p>
+    <p>メール：<input name="email" type="email" /></p>
+    <p>URL：<input name="url" type="url" /></p>
+    <p>検索：<input name="search" type="search" /></p>
+    <p>電話番号：<input name="telephone" type="tel" /></p>
+    <p>色：<input name="color" type="color" /></p>
+    <p>ファイル(複数):<input id="file" name="file" type="file" accept="image/*" multiple="multiple" /></p>
+    <input type="submit" value="送信" />
+  </form>
+</body>
+</html>

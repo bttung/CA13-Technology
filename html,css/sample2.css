@@ -1,0 +1,39 @@
+	 h1{
+	 	color: #ffffff;
+	 	background-color: #008000;
+	 	border-style: double;
+	 	border-width: 6pt;
+	 	text-align: center;
+	 	margin-right: 20%;
+	 	margin-left: 20%;
+	 	padding-top: 14px;
+	 	padding-right: 0px;
+	 	padding-bottom: 10px;
+	 }
+	 
+	 h2{
+	 	color: #ffffff;
+	 	background-color: #008000;
+	 	text-align: left;
+	 	position: relative;
+	 	z-index: 5;
+	 	margin-leftt: 2%;
+	 	margin-right: 25%;
+	 	margin-bottom: -10px
+	 	padding-bottom: 5px;
+	 	padding-left:10px;
+	 }
+	 
+	 p {
+	 	color: #00000;
+	 }
+	 
+	 div {
+	 	color: #000000;
+	 	background-color: #ffffff;
+	 	font-size: 20px;
+	 	z-index: 4;
+	 	margin-left: 1%;
+	 	padding: 2px 2% 2% 2%;
+	 	line-height: 120%;
+	 }

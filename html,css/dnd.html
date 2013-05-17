@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Drag and Dropのサンプル</title>
+  <style>
+  div {
+    height: 100px;
+    width: 100px;
+    float: left;
+  }
+  
+  #dest {
+    border: solid 1px;
+    clear: left;
+  }
+  </style>
+  <script>
+  function init() {
+    var src = ['target1', 'target2', 'target3'];
+    for (var i = 0; i < src.length; i++) {
+      var target = document.getElementById(src[i]);
+      (function(t) {
+        t.addEventListener('dragstart', function(ev) {
+          ev.dataTransfer.setData('text/plain', t.style.backgroundColor);
+          return true;
+        }, false);
+      })(target);
+    }
+    
+    var dest = document.getElementById('dest');
+    dest.addEventListener('dragover', function(ev) {
+      ev.preventDefault();
+      return false;
+    }, false);
+
+    dest.addEventListener('drop', function(ev) {
+      dest.style.backgroundColor = ev.dataTransfer.getData('text/plain');
+      ev.stopPropagation();
+      ev.preventDefault();
+      return false;
+    }, false);
+  }
+  </script>
+</head>
+<body onload="init()">
+  <h1>Drag &amp; Drop</h1>
+  <div id="target1" style="background-color: blue;" draggable="true"></div>
+  <div id="target2" style="background-color: yellow;" draggable="true"></div>
+  <div id="target3" style="background-color: red;" draggable="true"></div>
+  <div id="dest"></div>
+</body>
+</html>

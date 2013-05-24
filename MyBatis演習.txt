@@ -1,0 +1,27 @@
+以下の演習は mybatisSandBox_00 をコピーし mybatisSandBox_10 とした上で取り組むこと。
+各メソッドをUsrMstMapper.javaに追加し、対応する設定をUsrMstMapper.xmlに追加しなさい。
+(必要であれば新しいファイル等を追加してかまいません)
+
+1. usr_mstテーブルに新しくデータを登録するinsertメソッドを追加しなさい。
+   引数は UsrMst とし、戻り値は int とする。
+   ただし isDelFlg の値が null の場合は代わりに 0 をセットすること。
+   
+2. usr_mstテーブルを更新するupdateメソッドを追加しなさい。
+   引数は UsrMst とし、戻り値は int とする。
+   ただし値が null のものは現状のまま変更しないようにすること。
+   
+3. usr_mstテーブルを論理削除するlogicalDeleteメソッドを追加しなさい。
+   引数は String とし、戻り値は int とする。
+   
+4. usr_mstテーブルを物理削除するdeleteメソッドを追加しなさい。
+   引数は String とし、戻り値は int とする。
+
+5. usr_mstテーブルから指定された usr_id をもつレコードを取得する、findByIdListメソッドを追加しなさい。
+   引数は List<String> とし、戻り値は List<UsrMst> とする。
+
+6. UsrMstクラスにUsrInf型のusrInfフィールドを追加する。
+   usr_mstテーブルとusr_infテーブルから指定された usr_id をもつレコードを取得する、findByIdWithInfメソッドを追加しなさい。
+   引数は String とし、戻り値は UsrMst とする。
+   UsrMstオブジェクトのusrInfフィールドには、usr_infテーブルから取得したレコード情報を持つUsrInfオブジェクトがセットされていること。
+
+

@@ -1,0 +1,8 @@
+教科書上巻P.96の傘プログラムをServletで実装せよ。
+
+入力画面をkasa_input.html
+処理をKasaServletとする。
+5行目での入力を求める箇所は、
+kasa_input.htmlから送信された値とする。
+
+KasaServletは /kasa でアクセスできるように設定すること。
